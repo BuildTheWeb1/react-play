@@ -17,13 +17,13 @@ function MainComponent() {
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Name</th>
-              <th scope="col">Company</th>
+              <th scope="col">Title</th>
+              <th scope="col">Body</th>
             </tr>
           </thead>
           <tbody>
             {users.map(user => {
-              return <User id={user.id} name={user.name} company={user.company.name} key={user.id} />;
+              return <User id={user.id} title={user.title} body={user.body} key={user.id} />;
             })}
           </tbody>
         </table>
@@ -36,8 +36,8 @@ function User(props) {
   return (
     <tr>
       <th scope="row">{props.id}</th>
-      <td>{props.name}</td>
-      <td>{props.company}</td>
+      <td>{props.title}</td>
+      <td>{props.body}</td>
     </tr>
   );
 }

@@ -103,7 +103,7 @@ let users = [];
 
 async function getData() {
   try {
-    const response = await axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("https://jsonplaceholder.typicode.com/users");
+    const response = await axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("https://jsonplaceholder.typicode.com/posts");
     response.data.map(res => users.push(res));
   } catch (error) {
     console.error(error);
@@ -148,13 +148,13 @@ function MainComponent() {
     scope: "col"
   }, "#"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("th", {
     scope: "col"
-  }, "Name"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("th", {
+  }, "Title"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("th", {
     scope: "col"
-  }, "Company"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("tbody", null, _Controller_FakeData__WEBPACK_IMPORTED_MODULE_5__["users"].map(user => {
+  }, "Body"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("tbody", null, _Controller_FakeData__WEBPACK_IMPORTED_MODULE_5__["users"].map(user => {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(User, {
       id: user.id,
-      name: user.name,
-      company: user.company.name,
+      title: user.title,
+      body: user.body,
       key: user.id
     });
   })))));
@@ -163,7 +163,7 @@ function MainComponent() {
 function User(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("th", {
     scope: "row"
-  }, props.id), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("td", null, props.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("td", null, props.company));
+  }, props.id), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("td", null, props.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("td", null, props.body));
 }
 
 setInterval(() => react_dom__WEBPACK_IMPORTED_MODULE_2___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MainComponent, null), document.getElementById("app")), 1000); // loading only js on dev server
