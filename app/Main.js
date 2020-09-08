@@ -35,14 +35,14 @@ function MainComponent() {
 function User(props) {
   return (
     <tr>
-      <th scope="row">{props.id}</th>
+      <th scope="row">{props.userId}</th>
       <td>{props.title}</td>
       <td>{props.body}</td>
     </tr>
   );
 }
 
-setInterval(() => ReactDOM.render(<MainComponent />, document.getElementById("app")), 1000);
+ReactDOM.render(<MainComponent />, document.getElementById("app"));
 
 // loading only js on dev server
 // if (module.hot) module.hot.accept();

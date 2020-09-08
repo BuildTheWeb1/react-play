@@ -11,7 +11,7 @@ module.exports = {
   devtool: "source-map",
   devServer: {
     port: 3000,
-    contentBase: path.join(__dirname, "app"),
+    contentBase: path.join(__dirname, "/"),
     hot: true,
     historyApiFallback: { index: "index.html" }
   },

@@ -166,7 +166,7 @@ function User(props) {
   }, props.id), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("td", null, props.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("td", null, props.body));
 }
 
-setInterval(() => react_dom__WEBPACK_IMPORTED_MODULE_2___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MainComponent, null), document.getElementById("app")), 1000); // loading only js on dev server
+react_dom__WEBPACK_IMPORTED_MODULE_2___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(MainComponent, null), document.getElementById("app")); // loading only js on dev server
 // if (module.hot) module.hot.accept();
 
 /***/ }),
@@ -185,8 +185,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class Timer extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+    this.state = react__WEBPACK_IMPORTED_MODULE_0__["useState"];
+  }
+
   render() {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Today: ", new Date().toLocaleString());
+    const [theTime, setTheTime] = this.state(new Date().toLocaleString());
+    setTimeout(() => {
+      setTheTime(new Date().toLocaleString());
+    }, 1000);
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Today: ", theTime);
   }
 
 }
