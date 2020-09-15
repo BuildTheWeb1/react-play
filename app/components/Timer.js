@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 
 class Timer extends Component {
   constructor() {
@@ -13,6 +13,7 @@ class Timer extends Component {
       });
     }, 1000);
     return <p>Today: {this.state.date}</p>;
+
     // const [theTime, setTheTime] = this.state(new Date().toLocaleString());
     // setTimeout(() => {
     //   setTheTime(new Date().toLocaleString());
