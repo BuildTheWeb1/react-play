@@ -4,14 +4,12 @@ import ReactDOM from "react-dom";
 
 import Title from "./components/Title";
 import Timer from "./components/Timer";
-import Button from "./components/Button";
 
 function MainComponent() {
   return (
     <div>
       <Title />
       <Timer />
-      <Button />
     </div>
   );
 }
